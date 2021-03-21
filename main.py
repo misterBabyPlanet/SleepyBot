@@ -1,4 +1,5 @@
-import discord # discord package
+import discord  # discord package
+
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
@@ -23,8 +24,8 @@ class MyBot(discord.Client):
             await message.channel.send(f"Liste des commandes :\n{commands_string}")
 
         classic_messages_type_dico = {
-            "S!Help" : Help,
-            "S!Commandes" : Commandes
+            "S!Help": Help,
+            "S!Commandes": Commandes
         }
 
         if message.author == self.user:
@@ -36,9 +37,9 @@ class MyBot(discord.Client):
 
 # token recuperation
 def TOKEN_recuperation():
-    with open("TOKEN.txt", "r") as token_file:      # open TOKEN file
-        return token_file.read()                        # return TOKEN
+    with open("TOKEN.txt", "r") as token_file:  # open TOKEN file
+        return token_file.read()  # return TOKEN
 
 
-client = MyBot()                        # Bot Object
-client.run(TOKEN_recuperation())        # run Bot
+client = MyBot()  # Bot Object
+client.run(TOKEN_recuperation())  # run Bot
