@@ -1,5 +1,32 @@
 import discord  # discord package
 
+class shopOjet:
+    """ Shop object"""
+
+    def __init__(self, name, price, owner):
+        self.price = price,
+        self.name = name,
+        self.owner = owner
+
+    def get_price(self):
+        return self.price
+
+    def set_price(self, new_price):
+        self.price = new_price
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, new_name):
+        self.name = new_name
+
+    def get_owner(self):
+        return self.owner
+
+    def set_owner(self, new_owner):
+        self.owner = new_owner
+
+
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
@@ -17,19 +44,28 @@ class MyBot(discord.Client):
 
         # Commandes command response
         async def Commandes():
-            commandes_list = ["S!Help"]  # commandes list
+            commandes_dico = {
+                "S!Help": "-> Si vous savez pas quoi faire :)",
+                "S!Commandes": "-> Pour visualiser toutes les commandes disponibles",
+                "S!Shop": "-> En construction"
+            }
             commands_string = ""  # final string
 
             # list creation
-            for command in commandes_list:
-                commands_string += f"-{command}\n"
+            for command, text in commandes_dico.items():
+                commands_string += f"-{command} {text}\n"
 
             await message.channel.send(f"Liste des commandes :\n\n{commands_string}")  # message
+
+        # Shop command response
+        async def Shop():
+            await message.channel.send("En construction :)")
 
         # commands and correspond defs
         classic_messages_type_dico = {
             "S!Help": Help,
-            "S!Commandes": Commandes
+            "S!Commandes": Commandes,
+            "S!Shop": Shop
         }
 
         # if message authore is Sleepy bot
