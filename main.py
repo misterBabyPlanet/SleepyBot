@@ -4,11 +4,11 @@ class MyBot(discord.Client):
     """ Discord Bot entity """
 
     # launch bot
-    async def onReady(self):
+    async def on_ready(self):
         print(f"{self.user} launched\n")
 
     # bot comportment on receiving messages
-    async def onMessage(self, message):
+    async def on_message(self, message):
         pass
 
 # token recuperation
