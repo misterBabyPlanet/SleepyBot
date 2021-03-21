@@ -5,7 +5,7 @@ class MyBot(discord.Client):
 
     # launch bot
     async def onReady(self):
-        pass
+        print(f"{self.user} launched\n")
 
     # bot comportment on receiving messages
     async def onMessage(self, message):
