@@ -8,11 +8,15 @@ class shopOjet:
         self.name = name,
         self.owner = owner
 
+    ###
+
     def get_price(self):
         return self.price
 
     def set_price(self, new_price):
         self.price = new_price
+
+    ###
 
     def get_name(self):
         return self.name
@@ -20,13 +24,15 @@ class shopOjet:
     def set_name(self, new_name):
         self.name = new_name
 
+    ###
+
     def get_owner(self):
         return self.owner
 
     def set_owner(self, new_owner):
         self.owner = new_owner
 
-
+    ###
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
