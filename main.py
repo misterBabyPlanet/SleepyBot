@@ -13,18 +13,18 @@ class MyBot(discord.Client):
 
         # Help command response
         async def Help():
-            await message.channel.send('Bot en construction.\nPlein de trucs cool à terme :)') # message
+            await message.channel.send('Bot en construction.\nPlein de trucs cool à terme :)')  # message
 
         # Commandes command response
         async def Commandes():
-            commandes_list = ["S!Help"] # commandes list
-            commands_string = "" # final string
+            commandes_list = ["S!Help"]  # commandes list
+            commands_string = ""  # final string
 
             # list creation
             for command in commandes_list:
                 commands_string += f"-{command}\n"
 
-            await message.channel.send(f"Liste des commandes :\n{commands_string}") # message
+            await message.channel.send(f"Liste des commandes :\n\n{commands_string}")  # message
 
         # commands and correspond defs
         classic_messages_type_dico = {
@@ -38,8 +38,9 @@ class MyBot(discord.Client):
 
         # recuperation of commands and Defs
         for key, value in classic_messages_type_dico.items():
-            if message.content == key: # if command in message
-                await value() # def
+            if message.content == key:  # if command in message
+                await value()  # def
+
 
 # token recuperation
 def TOKEN_recuperation():
