@@ -11,29 +11,35 @@ class MyBot(discord.Client):
     # bot comportment on receiving messages
     async def on_message(self, message):
 
+        # Help command response
         async def Help():
-            await message.channel.send('Bot en construction.\nPlein de trucs cool à terme :)')
+            await message.channel.send('Bot en construction.\nPlein de trucs cool à terme :)') # message
 
+        # Commandes command response
         async def Commandes():
-            commandes_list = ["S!Help"]
-            commands_string = ""
+            commandes_list = ["S!Help"] # commandes list
+            commands_string = "" # final string
 
+            # list creation
             for command in commandes_list:
                 commands_string += f"-{command}\n"
 
-            await message.channel.send(f"Liste des commandes :\n{commands_string}")
+            await message.channel.send(f"Liste des commandes :\n{commands_string}") # message
 
+        # commands and correspond defs
         classic_messages_type_dico = {
             "S!Help": Help,
             "S!Commandes": Commandes
         }
 
+        # if message authore is Sleepy bot
         if message.author == self.user:
             pass
 
+        # recuperation of commands and Defs
         for key, value in classic_messages_type_dico.items():
-            if message.content == key:
-                await value()
+            if message.content == key: # if command in message
+                await value() # def
 
 # token recuperation
 def TOKEN_recuperation():
