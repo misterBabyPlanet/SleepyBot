@@ -1,0 +1,12 @@
+{
+  "licorne": {
+    "name": "licorne",
+    "price": 50,
+    "picture_path": "./object_pictures/licorne.png"
+  },
+  "paresseux": {
+    "name": "paresseux",
+    "price": 0,
+    "picture_path": "./object_pictures/no_image.png"
+  }
+}

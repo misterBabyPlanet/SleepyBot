@@ -1,6 +1,8 @@
 import discord  # discord package
+import os  # os
 
-class shopOjet:
+
+class ShopObject:
     """ Shop object"""
 
     def __init__(self, name, price, owner):
@@ -33,6 +35,7 @@ class shopOjet:
         self.owner = new_owner
 
     ###
+
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
