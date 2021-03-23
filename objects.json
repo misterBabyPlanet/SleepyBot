@@ -8,5 +8,45 @@
     "name": "paresseux",
     "price": 0,
     "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Dev": {
+    "name": "paresseux Dev",
+    "price": 404,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Tinder": {
+    "name": "paresseux Tinder",
+    "price": 69,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Thug": {
+    "name": "paresseux Thug",
+    "price": 500,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Stonk": {
+    "name": "paresseux Stonk",
+    "price": 1000000,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Stock": {
+    "name": "paresseux Stock",
+    "price": 10000,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Shetif": {
+    "name": "paresseux Shetif",
+    "price": 17,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Sayan": {
+    "name": "paresseux Sayan",
+    "price": 50000000,
+    "picture_path": "./object_pictures/no_image.png"
+  },
+  "paresseux Sad": {
+    "name": "paresseux Sad",
+    "price": 123,
+    "picture_path": "./object_pictures/no_image.png"
   }
 }
