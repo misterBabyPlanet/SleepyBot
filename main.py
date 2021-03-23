@@ -5,10 +5,9 @@ import os  # os
 class ShopObject:
     """ Shop object"""
 
-    def __init__(self, name, price, owner):
+    def __init__(self, name, price):
         self.price = price,
-        self.name = name,
-        self.owner = owner
+        self.name = name
 
     ###
 
@@ -26,15 +25,6 @@ class ShopObject:
     def set_name(self, new_name):
         self.name = new_name
 
-    ###
-
-    def get_owner(self):
-        return self.owner
-
-    def set_owner(self, new_owner):
-        self.owner = new_owner
-
-    ###
 
 
 class MyBot(discord.Client):
