@@ -5,25 +5,15 @@ import os  # os
 class ShopObject:
     """ Shop object"""
 
-    def __init__(self, name, price):
-        self.price = price,
-        self.name = name
+    def __init__(self, JSON_objects):
+        self.JSON_objects = JSON_objects
 
-    ###
+    def getJSONObjects(self):
+        return self.JSON_objects
 
-    def get_price(self):
-        return self.price
+    def setJSONObjects(self, JSON):
+        self.JSON_objects = JSON
 
-    def set_price(self, new_price):
-        self.price = new_price
-
-    ###
-
-    def get_name(self):
-        return self.name
-
-    def set_name(self, new_name):
-        self.name = new_name
 
 
 
