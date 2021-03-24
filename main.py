@@ -57,6 +57,11 @@ class Object:
     def setPicture_path(self, new_picture_path):
         self.picture_path = new_picture_path
 
+    ###
+
+    def get_informqtions(self):
+        return([self.name, self.price, self.picture_path])
+
 class MyBot(discord.Client):
     """ Discord Bot entity """
 
