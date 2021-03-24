@@ -31,6 +31,21 @@ class ShopObject:
     def setObjectsList(self, new_list):
         self.objectsList = new_list
 
+    ###
+
+    def printObjectsInformations(self):
+        for object in self.objectsList:
+
+            infos = object.get_informations()
+            dico_infos = {
+                'name': infos[0],
+                'price': infos[1],
+                'picture_path': infos[2]
+            }
+
+            print(f"{dico_infos['name']}\nprice : {dico_infos['price']}\npicture emplacement : {dico_infos['picture_path']}\n\n")
+
+
 class Object:
     """ Object from Shop"""
 
@@ -59,7 +74,7 @@ class Object:
 
     ###
 
-    def get_informqtions(self):
+    def get_informations(self):
         return([self.name, self.price, self.picture_path])
 
 class MyBot(discord.Client):
