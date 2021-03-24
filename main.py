@@ -1,5 +1,6 @@
 import discord  # discord package
 import os  # os
+import json
 
 
 class ShopObject:
@@ -8,11 +9,26 @@ class ShopObject:
     def __init__(self, JSON_objects):
         self.JSON_objects = JSON_objects
 
+        def listObjects():
+            list = []
+            for object in JSON_objects.values():
+                list.append(Object(object['name'], object['price'], object['picture_path']))
+
+            return list
+
+        self.objectsList = listObjects()
+
     def getJSONObjects(self):
         return self.JSON_objects
 
-    def setJSONObjects(self, JSON):
-        self.JSON_objects = JSON
+    def setJSONObjects(self, new_JSON):
+        self.JSON_objects = new_JSON
+
+    def getObjectsList(self):
+        return self.objectsList
+
+    def setObjectsList(self, new_list):
+        self.objectsList = new_list
 
 
 class Object:
@@ -98,6 +114,10 @@ def TOKEN_recuperation():
     with open("TOKEN.txt", "r") as token_file:  # open TOKEN file
         return token_file.read()  # return TOKEN
 
+def getJSon():
+    with open('objects.json', 'r') as JSON_file:
+        return json.load(JSON_file)
 
+Shop = ShopObject(getJSon())
 client = MyBot()  # Bot Object
 client.run(TOKEN_recuperation())  # run Bot
