@@ -3,6 +3,7 @@ import os  # os
 import json
 
 
+
 class ShopObject:
     """ Shop object"""
 
@@ -30,7 +31,6 @@ class ShopObject:
     def setObjectsList(self, new_list):
         self.objectsList = new_list
 
-
 class Object:
     """ Object from Shop"""
 
@@ -56,8 +56,6 @@ class Object:
 
     def setPicture_path(self, new_picture_path):
         self.picture_path = new_picture_path
-
-
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
@@ -109,6 +107,7 @@ class MyBot(discord.Client):
                 await value()  # def
 
 
+
 # token recuperation
 def TOKEN_recuperation():
     with open("TOKEN.txt", "r") as token_file:  # open TOKEN file
@@ -117,6 +116,8 @@ def TOKEN_recuperation():
 def getJSon():
     with open('objects.json', 'r') as JSON_file:
         return json.load(JSON_file)
+
+
 
 Shop = ShopObject(getJSon())
 client = MyBot()  # Bot Object
