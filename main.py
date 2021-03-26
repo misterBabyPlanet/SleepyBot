@@ -36,11 +36,10 @@ class ShopObject:
     def printObjectsInformations(self):
         for object in self.objectsList:
 
-            infos = [object.getName(), object.getPrice(), object.getPicture_path()]
             dico_infos = {
-                'name': infos[0],
-                'price': infos[1],
-                'picture_path': infos[2]
+                'name': object.getName(),
+                'price': object.getPrice(),
+                'picture_path': object.getPicture_path()
             }
 
             print(f"{dico_infos['name']}\nprice : {dico_infos['price']}\npicture emplacement : {dico_infos['picture_path']}\n\n")
