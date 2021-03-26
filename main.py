@@ -36,7 +36,7 @@ class ShopObject:
     def printObjectsInformations(self):
         for object in self.objectsList:
 
-            infos = object.get_informations()
+            infos = [object.getName(), object.getPrice(), object.getPicture_path()]
             dico_infos = {
                 'name': infos[0],
                 'price': infos[1],
@@ -73,9 +73,6 @@ class Object:
         self.picture_path = new_picture_path
 
     ###
-
-    def get_informations(self):
-        return([self.name, self.price, self.picture_path])
 
 class MyBot(discord.Client):
     """ Discord Bot entity """
