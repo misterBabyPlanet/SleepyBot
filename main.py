@@ -1,6 +1,7 @@
 import discord  # discord package
 import os  # os
 import json
+import time
 
 
 
@@ -137,4 +138,7 @@ def getJSon():
 
 Shop = ShopObject(getJSon())
 client = MyBot()  # Bot Object
-client.run(TOKEN_recuperation())  # run Bot
+
+while True:
+    client.run(TOKEN_recuperation())  # run Bot
+    time.sleep(0.01)
