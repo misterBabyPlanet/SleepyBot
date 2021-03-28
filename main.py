@@ -94,7 +94,7 @@ class MyBot(discord.Client):
                 "S!Help": "-> Si vous savez pas quoi faire :)",
                 "S!Commandes": "-> Pour visualiser toutes les commandes disponibles",
                 "S!Shop": "-> En construction",
-                "S!Version": "-> Version Sleepy"
+                "S!Version": "-> Version SleepyBot"
             }
             commands_string = ""  # final string
 
