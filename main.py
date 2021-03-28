@@ -93,7 +93,8 @@ class MyBot(discord.Client):
             commandes_dico = {
                 "S!Help": "-> Si vous savez pas quoi faire :)",
                 "S!Commandes": "-> Pour visualiser toutes les commandes disponibles",
-                "S!Shop": "-> En construction"
+                "S!Shop": "-> En construction",
+                "S!Version": "Version Sleepy"
             }
             commands_string = ""  # final string
 
@@ -107,11 +108,16 @@ class MyBot(discord.Client):
         async def Shop():
             await message.channel.send("En construction :)")
 
+        # Bot version info
+        async def Version():
+            await message.channel.send('Version actuelle : Dev 0.1 + quqes features possibles, bot en construction :)')  # message
+
         # commands and correspond defs
         classic_messages_type_dico = {
             "S!Help": Help,
             "S!Commandes": Commandes,
-            "S!Shop": Shop
+            "S!Shop": Shop,
+            "S!Version": Version
         }
 
         # if message authore is Sleepy bot
