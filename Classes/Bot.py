@@ -1,5 +1,6 @@
 import discord
 
+
 class MyBot(discord.Client):
     """ Discord Bot entity """
 
@@ -12,7 +13,7 @@ class MyBot(discord.Client):
 
         # Help command response
         async def Help():
-            await message.channel.send('Bot en construction.\nPlein de trucs cool à terme :)')  # message
+            await message.channel.send('Bot en construction.\nPlein de trucs cool à terms :)')  # message
 
         # Commandes command response
         async def Commandes():
@@ -36,7 +37,8 @@ class MyBot(discord.Client):
 
         # Bot version info
         async def Version():
-            await message.channel.send('Version actuelle : Dev 0.1 + quqes features possibles, bot en construction :)')  # message
+            await message.channel.send(
+                'Version actuelle : Dev 0.1 + quqes features possibles, bot en construction :)')  # message
 
         # commands and correspond defs
         classic_messages_type_dico = {
@@ -46,7 +48,7 @@ class MyBot(discord.Client):
             "S!Version": Version
         }
 
-        # if message authore is Sleepy bot
+        # if message author is Sleepy bot
         if message.author == self.user:
             pass
 
