@@ -1,8 +1,12 @@
 # .env files
 project.env
 
-# ?
+# others
+MakeFile
+Tests
 .idea
+github_misterBabyPlanet
+github_misterBabyPlanet.pub
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -134,7 +138,3 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-# others
-MakeFile
-Tests
