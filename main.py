@@ -1,12 +1,25 @@
 import json
+import os
 import time
+
+import discord  # discord package
+from dotenv import load_dotenv  # environment variables
+
 from Classes import Shop, Bot
 
+load_dotenv()
 
-# token recuperation
-def TOKEN_recuperation():
-    with open("TOKEN.txt", "r") as token_file:  # open TOKEN file
-        return token_file.read()  # return TOKEN
+
+class MyBot(discord.Client):
+    """ Discord Bot entity """
+
+    # launch bot
+    async def on_ready(self):
+        pass
+
+    # bot comportment on receiving messages
+    async def on_message(self, message):
+        pass
 
 
 # get objects
@@ -19,5 +32,5 @@ Shop = Shop.ShopObject(getJSon())  # shop creation
 client = Bot.MyBot()  # Bot Object
 
 while True:
-    client.run(TOKEN_recuperation())  # run Bot
+    client.run(os.getenv('DISCORD_TOKEN'))  # run Bot
     time.sleep(0.01)  # client rerun

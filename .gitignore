@@ -1,4 +1,8 @@
-TOKEN.txt
+# .env files
+project.env
+
+# ?
+.idea
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
@@ -111,6 +115,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+SleepyENV
 
 # Spyder project settings
 .spyderproject
